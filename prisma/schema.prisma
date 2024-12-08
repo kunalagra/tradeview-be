@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model MarketData {
+  id             Int      @id @default(autoincrement())
+  date           DateTime
+  price          Float
+  instrumentName String
+
+  @@index([instrumentName, date]) // Combined index for optimized queries
+  @@index([date]) // Index for range queries by date
+}
+
+model User {
+  id        String   @id @default(cuid()) // Unique user identifier
+  email     String   @unique // Unique email for authentication
+  password  String
+  user_name  String
+  user_type  String
+  broker    String
+  createdAt DateTime @default(now()) // Timestamp when the user is created
+  updatedAt DateTime @updatedAt // Timestamp for updates to the user
+}

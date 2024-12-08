@@ -1,0 +1,66 @@
+{
+	"type": "module",
+	"name": "trading-platform-api",
+	"version": "1.0.0",
+	"description": "This project was bootstrapped with Fastify-CLI.",
+	"main": "app.ts",
+	"directories": {
+		"test": "test"
+	},
+	"scripts": {
+		"test": "npm run build:ts && tsc -p test/tsconfig.json && FASTIFY_AUTOLOAD_TYPESCRIPT=1 node --test --experimental-test-coverage --loader ts-node/esm test/**/*.ts",
+		"start": "tsx src/server.ts",
+		"build:ts": "tsc",
+		"dev": "tsx watch src/server.ts",
+		"lint": "eslint .",
+		"format": "prettier --write .",
+		"initSql": "tsx initData.ts"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,json,css,scss,md}": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	},
+	"keywords": [],
+	"author": "Kunal",
+	"license": "ISC",
+	"dependencies": {
+		"@fastify/autoload": "^6.0.0",
+		"@fastify/cors": "^10.0.1",
+		"@fastify/env": "^5.0.1",
+		"@fastify/jwt": "^9.0.1",
+		"@fastify/sensible": "^6.0.0",
+		"@fastify/websocket": "^11.0.1",
+		"@prisma/client": "^6.0.1",
+		"@types/bcrypt": "^5.0.2",
+		"bcrypt": "^5.1.1",
+		"csv-parser": "^3.0.0",
+		"dotenv": "^16.4.5",
+		"fastify": "^5.0.0",
+		"fastify-cli": "^7.0.1",
+		"fastify-plugin": "^5.0.0"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.11.1",
+		"@types/mongoose": "^5.11.96",
+		"@types/node": "^22.7.4",
+		"@types/ws": "^8.5.13",
+		"eslint": "^9.11.1",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"fastify-tsconfig": "^2.0.0",
+		"globals": "^15.9.0",
+		"husky": "^9.1.6",
+		"prettier": "^3.3.3",
+		"prisma": "^6.0.1",
+		"tsx": "^4.19.1",
+		"typescript": "^5.6.2",
+		"typescript-eslint": "^8.7.0"
+	}
+}
