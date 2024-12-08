@@ -22,7 +22,7 @@ export const placeOrderSchema = {
 		required: ['symbol', 'quantity', 'price'],
 		properties: {
 			symbol: { type: 'string' },
-			quantity: { type: 'number', minimum: 1 },
+			quantity: { type: 'integer', minimum: 1 },
 			price: { type: 'number', minimum: 0.001 }, // Price should be greater than 0
 		},
 	},
