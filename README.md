@@ -1,24 +1,78 @@
-# Getting Started with [Fastify-CLI](https://www.npmjs.com/package/fastify-cli)
+<h1 align="center">
+  <br>
+  TradeView Backend
+  <br>
+</h1>
 
-This project was bootstrapped with Fastify-CLI.
+<h4 align="center">Fastify + Prisma Backend for TradeView</h4>
 
-## Available Scripts
+<p align="center">
+  <a href="#key-features">Key Features</a> •
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
+</p>
 
-In the project directory, you can run:
 
-### `npm run dev`
+## Key Features
 
-To start the app in dev mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Websocket for Data Streaming of Indices
+* Typescript codebase with schema validations
+* Prisma ORM with SQLite DB
+* JWT based Auth
+* Utilises fastify plugin systems with AutoLoad plugin to load them
+- All Endpoints (prefix: v1)
+    - POST user/login
+    - POST user/register
+    - GET user/profile
+    - GET portfolio/holdings
+    - POST order/place_order
+    - GET market/historical-data
+    - GET market/unique-symbols
+    - Websocket market//ws-market-data
+    
+  
 
-### `npm start`
+## How To Use
 
-For production mode
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-### `npm run test`
+```bash
+# Clone this repository
+$ git clone https://github.com/kunalagra/tradeview-be
 
-Run the test cases.
+# Go into the repository
+$ cd tradeview-be
 
-## Learn More
+# Rename .env.example to .env
+$ mv .env.example .env
 
-To learn Fastify, check out the [Fastify documentation](https://fastify.dev/docs/latest/).
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm run dev
+```
+> [!IMPORTANT]  
+> Populate your .env keys with their respective values. 
+
+> [!NOTE]
+> If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+
+## Credits
+
+This software uses the following packages:
+
+- [Node.js](https://nodejs.org/)
+- [Fastify](https://fastify.dev/)
+- [Prisma](https://www.prisma.io/)
+
+
+## You may also like...
+
+- [Codegamy](https://github.com/kunalagra/codegamy) - An AIO Medical platform to connect doctors and patients
+- [Sikho](https://github.com/kunalagra/sikho) - Professional Learning Marketplace
+
+## License
+
+AGPL-3
