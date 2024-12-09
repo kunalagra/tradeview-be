@@ -31,13 +31,14 @@ const marketRoutes: FastifyPluginAsync = async (fastify) => {
 					where: {
 						instrumentName: symbol,
 						date: {
-							gte: fromDate, 
-							lte: toDate, 
+							gte: fromDate,
+							lte: toDate,
 						},
 					},
 					orderBy: {
-						date: 'asc', 
+						date: 'asc',
 					},
+					select: { date: true, price: true },
 				});
 
 				if (data.length === 0) {
@@ -142,6 +143,7 @@ const marketRoutes: FastifyPluginAsync = async (fastify) => {
 								},
 							},
 							orderBy: { date: 'asc' },
+							select: { date: true, price: true },
 						})
 						.then((data) => {
 							const response: WebSocketResponse = {

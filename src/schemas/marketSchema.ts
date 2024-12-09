@@ -9,11 +9,10 @@ export const historicalDataSuccessResponseSchema = {
 			items: {
 				type: 'object',
 				properties: {
-					instrumentName: { type: 'string' },
 					date: { type: 'string', format: 'date' },
 					price: { type: 'number' },
 				},
-				required: ['instrumentName', 'date', 'price'],
+				required: ['date', 'price'],
 			},
 		},
 	},

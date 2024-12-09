@@ -13,15 +13,15 @@
   <a href="#license">License</a>
 </p>
 
-
 ## Key Features
 
-* Websocket for Data Streaming of Indices
-* Typescript codebase with schema validations
-* Prisma ORM with SQLite DB
-* JWT based Auth
-* Utilises fastify plugin systems with AutoLoad plugin to load them
-- All Endpoints (prefix: v1)
+- Websocket for Data Streaming of Indices
+- Typescript codebase with schema validations
+- Prisma ORM with SQLite DB
+- JWT based Auth
+- Utilises fastify plugin systems with AutoLoad plugin to load them
+
+* All Endpoints (prefix: v1)
     - POST user/login
     - POST user/register
     - GET user/profile
@@ -30,8 +30,6 @@
     - GET market/historical-data
     - GET market/unique-symbols
     - Websocket market//ws-market-data
-    
-  
 
 ## How To Use
 
@@ -53,8 +51,9 @@ $ npm install
 # Run the app
 $ npm run dev
 ```
+
 > [!IMPORTANT]  
-> Populate your .env keys with their respective values. 
+> Populate your .env keys with their respective values.
 
 > [!NOTE]
 > If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
@@ -66,7 +65,6 @@ This software uses the following packages:
 - [Node.js](https://nodejs.org/)
 - [Fastify](https://fastify.dev/)
 - [Prisma](https://www.prisma.io/)
-
 
 ## You may also like...
 
